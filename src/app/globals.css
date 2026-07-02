@@ -1,0 +1,45 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+html, body {
+  background: #000;
+  color: #00ff41;
+  font-family: 'VT323', monospace;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+  
+  /* FIXED: Added explicit quotes around the URL string */
+cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M0,0 L0,23 L6,17 L12,29 L16,27 L11,15 L19,15 Z' fill='white' stroke='black' stroke-width='2'/%3E%3C/svg%3E"), default !important;}
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+@theme {
+  --color-matrix-bg: #000000;
+  --color-matrix-surface: #0a0a0a;
+  --color-matrix-green: #00ff41;
+  --color-matrix-green-bright: #39ff14;
+  --color-matrix-green-dark: #008f11;
+  --color-matrix-text: #ccffcc;
+}
+
+.bg-matrix-grid {
+  background-color: black;
+  background-image:
+    linear-gradient(rgba(0, 255, 65, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.15) 1px, transparent 1px);
+  background-size: 40px  40px;
+}
+
+@theme {
+  --animate-scroll-left: scroll-left 30s linear infinite;
+
+  @keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
